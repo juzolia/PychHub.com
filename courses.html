@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Courses</title>
+  </head>
+  <body>
+    <nav>
+      <h1><span> Psych </span>Hub <span class="du">-DU version-</span></h1>
+      <ul>
+        <li><a href="index.html">🏡 Home</a></li>
+        <li><a href="courses.html" class="active-link">📘 Courses</a></li>
+        <li><a href="average.html">📊 Average</a></li>
+        <li><a href="Q & A.html">❓ Q&A</a></li>
+        <li><a href="about.html">📍 About</a></li>
+      </ul>
+    </nav>
+    <!-- keep going -->
+    <div class="motivation-container">
+      <h1>
+        <span>K</span><span>E</span><span>E</span><span>P</span
+        ><span style="white-space: pre"> </span> <span>G</span><span>O</span
+        ><span>I</span><span>N</span><span>G</span><span>.</span><span>.</span
+        ><span>.</span>
+        <div class="motivation-character">🎉</div>
+      </h1>
+    </div>
+
+    <!-- Select year & semester -->
+    <div class="selectors">
+      <h1>📆 Select your year & semester :</h1>
+      <div class="actSelectors">
+        <div class="chooseYear">
+          <label class="year">Year: </label>
+          <select id="yearSelect" onchange="handleYearChange()">
+            <option value="1">1st</option>
+            <option value="2">2nd</option>
+            <option value="3">3rd</option>
+            <option value="4">4th</option>
+            <option value="5">5th</option>
+          </select>
+        </div>
+
+        <div class="chooseSemester">
+          <label class="semester">Semester: </label>
+          <select id="semesterSelect" onchange="handleSemesterChange()">
+            <option value="1">1st</option>
+            <option value="2">2nd</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div id="courseContainer"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
