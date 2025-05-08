@@ -12,7 +12,7 @@
   --blue: #4b8380;
   --mint: #cdf4ed8f;
   --lilac: #035551;
-  --navy: #13313d;
+  --navy: #174b5f;
 }
 
 body {
@@ -103,6 +103,7 @@ nav a:hover {
   position: relative;
   overflow: hidden;
   flex-wrap: wrap;
+  border-bottom: 3px dashed var(--lilac);
 }
 .hero .what {
   font-family: "MuseoModerno", sans-serif;
@@ -125,33 +126,32 @@ nav a:hover {
   animation: float 4s ease-in-out infinite;
 }
 .overview {
-  padding: min(2rem, 8%);
+  padding: min(4rem, 8%);
   height: 40rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.403);
-
   color: var(--lilac);
   background-color: var(--smthWhite);
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  z-index: 200;
 }
 .overview h1 {
   font-family: "MuseoModerno", sans-serif;
 }
-.overview p {
+.overview p,
+.overview li {
   font-size: 1.1rem;
   line-height: 1.7rem;
   text-align: justify;
 }
 .overview img {
-  height: 30%;
+  height: 40%;
   border-radius: 10% 50% 10% 50% / 50% 10% 50% 10%;
 }
 .overview li {
   line-height: 1.7rem;
 }
 /*             courses style              */
+
 /* motivation*/
 
 .motivation-container {
@@ -355,7 +355,7 @@ h1 div:nth-child(14) {
 }
 
 .faculty-chip:hover {
-  transform: translateX(10px);
+  transform: translateX(5rem);
 }
 
 /*           average style            */
@@ -370,17 +370,94 @@ h1 div:nth-child(14) {
   align-items: center;
 }
 
-.progress-ring {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: conic-gradient(var(--teal) 75%, var(--lilac) 0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 4px 4px 0 var(--blush);
+/*              Q&A style            */
+.faq-section {
+  padding: 2rem;
+  background-color: var(--smthWhite);
+  border-radius: 10px;
+}
+
+.faq-title {
+  color: var(--blue);
+  border-bottom: 2px solid var(--blue);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-family: "MuseoModerno", sans-serif;
+  font-size: 2rem;
+}
+
+.faq-item {
+  background: white;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.question {
+  color: var(--lilac);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.steps-list {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.steps-list li {
+  margin-bottom: 0.8rem;
+
+  line-height: 1.6;
+}
+
+.time-note {
+  color: #e99221;
+  font-style: italic;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #fffcf5;
+  border-left: 3px solid #e7b43c98;
+  border-radius: 10rem;
+  width: fit-content;
+}
+.time-note:hover {
+  transform: translateX(5rem);
 }
 /*about style*/
+.julia-container {
+  display: flex;
+  justify-content: space-between;
+  padding: min(2rem, 8%);
+  height: 20rem;
+  color: var(--lilac);
+  background-color: var(--smthWhite);
+  gap: 2rem;
+}
+
+.julia-container h3 {
+  font-family: "MuseoModerno", sans-serif;
+  font-size: 2rem;
+}
+.julia-container span {
+  font-family: "MuseoModerno", sans-serif;
+  color: var(--blue);
+  text-decoration: underline;
+  font-size: 1.3rem;
+}
+.julia-container p {
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  text-align: justify;
+}
+.julia-container img {
+  height: 80%;
+  border-radius: 10% 50% 10% 50% / 50% 10% 50% 10%;
+}
 #map {
   height: 300px;
   background: var(--cream);
@@ -388,32 +465,27 @@ h1 div:nth-child(14) {
   margin: 2rem 0;
 }
 
-.contact-form,
 .About-form {
   background: white;
+  border: 2px dashed var(--lilac);
   padding: 2rem;
   border-radius: 20px;
   max-width: 600px;
-  margin: 2rem auto;
+  margin: 1.5rem auto;
 }
 
 input,
-textarea {
-  width: 100%;
-  padding: 1rem;
-  margin: 0.5rem 0;
-  border: 2px solid var(--teal);
-  border-radius: 10px;
-  font-family: inherit;
-}
+textarea,
 .About-form li {
-  width: 100%;
+  width: 80%;
   padding: 1rem;
-  margin: 0.5rem 0;
+  margin: 0.8rem 0;
   border: 2px solid var(--teal);
   border-radius: 10px;
   font-family: inherit;
+  list-style: none;
 }
+
 .About-form a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.608);
@@ -435,7 +507,6 @@ button:hover {
 }
 #map {
   border: 1rem solid #7dc8ca;
-  margin: 3rem 0rem;
   min-height: 10rem;
   border-radius: 5%;
   width: 100%;
